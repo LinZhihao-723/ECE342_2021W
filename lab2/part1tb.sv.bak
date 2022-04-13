@@ -1,0 +1,30 @@
+module tb_multiplier_row();
+	logic [7:0] P_in;
+	logic [7:0] M_in;
+	logic [7:0] Q_in;
+	logic [7:0] P_out;
+	logic C_out;
+	multiplier_row #(.N(8)) DUT(P_in, M_in, Q_in, P_out, C_out);
+	initial begin
+		P_in = 8'd16;
+		M_in = -8'd32;
+		Q_in = 2'b00;
+		if(P_out == P_in)
+			$display("Passed!");
+		else 
+			$display("Fail!");
+		#5;
+		Q_in = 2'b01;
+		if(P_out == P_in + M_in)
+			$display("Passed!");
+		else 
+			$display("Fail!");
+		#5;
+		Q_in = 2'b10;
+		if(P_out == P_in - M_in)
+			$display("Passed!");
+		else 
+			$display("Fail!");
+		$stop();
+	end
+endmodule

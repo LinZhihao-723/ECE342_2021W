@@ -1,0 +1,148 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pleiades/Desktop/ECE342/lab5/tester
+vcontrol_path
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1616032944
+!i10b 1
+!s100 `c>m=kCKPb8`JHKaNX7_C1
+I<Fn7UOQ8jl^B<7X??aTzZ3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 cpu_sv_unit
+S1
+R0
+Z5 w1615974087
+Z6 8cpu.sv
+Z7 Fcpu.sv
+L0 446
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1616032944.000000
+Z10 !s107 cpu.sv|
+Z11 !s90 -reportprogress|300|cpu.sv|
+!i113 1
+Z12 tCvgOpt 0
+vcpu
+R1
+R2
+!i10b 1
+!s100 ZD5Oo:AFKW^]CBND5`8I51
+IFn>a5lgg<^GQ65g^giW_S3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 17
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vdata_path
+R1
+R2
+!i10b 1
+!s100 b:4GHg`E[KkaXj7oP_MaK1
+I_;@mchSNN0m30ReOJ[Z<83
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 210
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vinstruction_register
+R1
+R2
+!i10b 1
+!s100 @AW[`N;B1Z<^dm8hV=iF40
+I0To<bIYB9j@JVSS=LF_T50
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 430
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vregister_file
+R1
+R2
+!i10b 1
+!s100 gkV^_8GLcc`XV2iTSTUM@2
+ILlWX0>kR7iPo[9_hN4X6X2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 149
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vtb
+R1
+R2
+!i10b 1
+!s100 TPVG>:XLd_;fGTY_lKb3_0
+IXa88OieS]d`;_P6z8niEh0
+R3
+!s105 tb_sv_unit
+S1
+R0
+w1615976939
+8tb.sv
+Ftb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 tb.sv|
+!s90 -reportprogress|300|tb.sv|
+!i113 1
+R12
