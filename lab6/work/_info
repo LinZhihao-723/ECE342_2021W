@@ -1,0 +1,309 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pleiades/Desktop/ECE342/lab6
+vavalon_fp_mult
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1617269807
+!i10b 1
+!s100 ONgg@32<Xz0MfC;Gg3SzQ3
+I@GKR5[:ojkGiWU:lz25CC3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 part3_sv_unit
+S1
+R0
+Z5 w1617268002
+Z6 8part3.sv
+Z7 Fpart3.sv
+L0 1186
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1617269807.000000
+Z10 !s107 part3.sv|
+Z11 !s90 -reportprogress|300|part3.sv|
+!i113 1
+Z12 tCvgOpt 0
+vavalon_slave
+R1
+R2
+!i10b 1
+!s100 zVzP^PaVUz=f4O`AcQhkL1
+IUcn886OOBHBQO0b0Yg4873
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1239
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vcontrol_path
+R1
+R2
+!i10b 1
+!s100 S:NLH?cE@IWSciH=a1bGj3
+I:LG_gn54M0U7i;Gz=QjI50
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 662
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vcpu
+R1
+R2
+!i10b 1
+!s100 FP?@Vi7^i2Cbl0ab`CG@:0
+IfjInB>MF_8nc6RfV5^6I?2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 232
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vdata_path
+R1
+R2
+!i10b 1
+!s100 e`Q]d39liYdZE3miIOMgO3
+IZ[7fIIiVjBaF:K`@^>WSA1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 426
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vfp_mult
+R1
+R2
+!i10b 1
+!s100 bA8@B7Nl6MAG=RJnBV]`l1
+IGFZ=KNiY@GHQW5F]OR=Nl0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 2205
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vfp_mult_altfp_mult_her
+R1
+R2
+!i10b 1
+!s100 W4L:G9Xm]b4KPc6aLRLmb3
+IMg6m^M5U0ezo<4E:=H>_G0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1394
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vinstruction_register
+R1
+R2
+!i10b 1
+!s100 <m^GTfHd^2RAkeL6ZKlCg0
+IJ>GD4L]^ID1VoYTibh_^o0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 646
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vmem
+R1
+R2
+!i10b 1
+!s100 eh896^DhnfNzb?ei4[^Pb0
+IJG6L6@Xh>j;cT0z1n<5W11
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 144
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vpart1
+R1
+!s110 1617256293
+!i10b 1
+!s100 =eO2QziLFoN>]cA9D7Ig81
+I@`308>oW[oOAg;C=oE89n3
+R3
+!s105 part1_sv_unit
+S1
+R0
+w1617255406
+8part1.sv
+Fpart1.sv
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1617256293.000000
+!s107 part1.sv|
+!s90 -reportprogress|300|part1.sv|
+!i113 1
+R12
+vpart3
+R1
+R2
+!i10b 1
+!s100 8BS?XPX]zFgUd7E[KFli]2
+IbLBUVePF>K]h9OSmlj6?W0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vregister_file
+R1
+R2
+!i10b 1
+!s100 =[P7;GJ[?R_62_<9a9IMF0
+IHA8mJSV7^MIV?aIcSi?G_3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 365
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vtb
+R1
+R2
+!i10b 1
+!s100 8Ed[j[YLBmQ7OL02Y`KPX2
+IE1e>2gDhH@cW]i;6OioOH3
+R3
+!s105 part3tb_sv_unit
+S1
+R0
+w1617269763
+8part3tb.sv
+Fpart3tb.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+!s107 part3tb.sv|
+!s90 -reportprogress|300|part3tb.sv|
+!i113 1
+R12

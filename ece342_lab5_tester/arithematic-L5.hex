@@ -1,0 +1,110 @@
+@00000000
+//  This File will test the basic arithematic instructions
+
+13 09 40 00 	// 0x00000000: addi s2, zero, 4	// x18 = 4 
+93 09 d0 ff 	// 0x00000004: addi s3, zero, -3	// x19 = -3
+33 0a 39 41 	// 0x00000008: sub s4, s2, s3	// x20 = 7
+b3 8a 29 41 	// 0x0000000c: sub s5, s3, s2	// x21 = -7
+33 0b 5a 01 	// 0x00000010: add s6, s4, s5	// x22 = 0
+37 03 ff ff 	// 0x00000014: lui t1, 0xFFFF0	// x6 = 0xFFFF0000
+93 03 00 ff 	// 0x00000018: addi t2, zero, 0xFF0	// x7 = 0xFFFFFFF0
+b3 6b 73 00 	// 0x0000001c: or s7, t1, t2	// x23 = 0xFFFFFFF0
+33 7c 73 00 	// 0x00000020: and s8, t1, t2	// x24 = 0xFFFF0000
+b3 4c 73 00 	// 0x00000024: xor s9, t1, t2	// x25 = 0x0000FFF0
+13 05 a0 00 	// 0x00000028: addi a0, zero, 0x00a	// x10 = 0x0000000A 
+93 75 65 00 	// 0x0000002c: andi a1, a0, 0x006	// x11 = 0x00000002
+13 66 65 00 	// 0x00000030: ori a2, a0, 0x006	// x12 = 0x0000000E
+93 46 65 00 	// 0x00000034: xori a3, a0, 0x006	// x13 = 0x0000000C
+13 17 33 00 	// 0x00000038: slli a4, t1, 3	// x14 = 0xFFF80000
+93 57 83 00 	// 0x0000003c: srli a5, t1, 8	// x15 = 0x00FFFF00
+13 58 83 40 	// 0x00000040: srai a6, t1, 8	// x16 = 0xFFFFFF00
+93 08 f0 01 	// 0x00000044: addi a7, zero, 31	// x17 = 0x0000001F
+13 0d 10 00 	// 0x00000048: addi s10, zero, 1	// x26 = 0x00000001
+33 1e 1d 01 	// 0x0000004c: sll t3, s10, a7	// x28 = 0x80000000
+b3 5e 1e 01 	// 0x00000050: srl t4, t3, a7	// x29 = 0x00000001
+33 5f 1e 41 	// 0x00000054: sra t5, t3, a7	// x30 = 0xFFFFFFFF
+13 0d 00 01 	// 0x00000058: addi s10, zero, 16	// x26 = 0x00000010
+b7 0d ff ff 	// 0x0000005c: lui s11, 0xFFFF0	// x27 = 0xFFFF0000
+b3 20 bd 01 	// 0x00000060: slt ra, s10, s11	// x1 = 0x00000000
+33 a1 ad 01 	// 0x00000064: slt sp, s11, s10	// x2 = 0x00000001
+b3 31 bd 01 	// 0x00000068: sltu gp, s10, s11	// x3 = 0x00000001
+33 b2 ad 01 	// 0x0000006c: sltu tp, s11, s10	// x4 = 0x00000000
+13 24 fd ff 	// 0x00000070: slti s0, s10, 0xFFF	// x8 = 0x00000000
+93 34 fd ff 	// 0x00000074: sltiu s1, s10, 0xFFF	// x9 = 0x00000001
+97 02 cb ff 	// 0x00000078: auipc t0, 0xFFCB0	// x5 = 0xFFCB0078
+// measure_end:
+13 00 10 00 	// 0x0000007c: addi zero, zero, 1
+13 00 00 00 	// 0x00000080: nop 
+13 00 00 00 	// 0x00000084: nop 
+13 00 00 00 	// 0x00000088: nop 
+13 00 00 00 	// 0x0000008c: nop 
+13 00 00 00 	// 0x00000090: nop 
+13 00 00 00 	// 0x00000094: nop 
+13 00 00 00 	// 0x00000098: nop 
+13 00 00 00 	// 0x0000009c: nop 
+13 00 00 00 	// 0x000000a0: nop 
+13 00 00 00 	// 0x000000a4: nop 
+13 00 00 00 	// 0x000000a8: nop 
+13 00 00 00 	// 0x000000ac: nop 
+13 00 00 00 	// 0x000000b0: nop 
+13 00 00 00 	// 0x000000b4: nop 
+13 00 00 00 	// 0x000000b8: nop 
+
+// Basic details
+// .org	0x800
+@00000800
+// .dw 0x0	// Start of PC
+00 00 00 00 
+// .dw measure_end	// End of PC
+7c 00 00 00 
+// .dw 32	// Num Instruction
+20 00 00 00 
+// .dw 25	// Minimum IPC * 128
+19 00 00 00 
+
+// Which register to check
+// .db 0b11111111
+// .db 0b11111111
+// .db 0b11111111
+// .db 0b11111111
+ff ff ff ff 
+
+// Expected register values
+// .org	0x820
+@00000820
+// .dw 0x00000000, 0x00000000, 0x00000001, 0x00000001, 0x00000000, 0xFFCB0078, 0xFFFF0000, 0xFFFFFFF0
+00 00 00 00 
+00 00 00 00 
+01 00 00 00 
+01 00 00 00 
+00 00 00 00 
+78 00 cb ff 
+00 00 ff ff 
+f0 ff ff ff 
+// .dw 0x00000000, 0x00000001, 0x0000000A, 0x00000002, 0x0000000E, 0x0000000C, 0xFFF80000, 0x00FFFF00
+00 00 00 00 
+01 00 00 00 
+0a 00 00 00 
+02 00 00 00 
+0e 00 00 00 
+0c 00 00 00 
+00 00 f8 ff 
+00 ff ff 00 
+// .dw 0xFFFFFF00, 0x0000001F, 0x00000004, 0xfffffffd, 0x00000007, 0xfffffff9, 0x00000000, 0xFFFFFFF0
+00 ff ff ff 
+1f 00 00 00 
+04 00 00 00 
+fd ff ff ff 
+07 00 00 00 
+f9 ff ff ff 
+00 00 00 00 
+f0 ff ff ff 
+// .dw 0xFFFF0000, 0x0000FFF0, 0x00000010, 0xFFFF0000, 0x80000000, 0x00000001, 0xFFFFFFFF, 0x00000000
+00 00 ff ff 
+f0 ff 00 00 
+10 00 00 00 
+00 00 ff ff 
+00 00 00 80 
+01 00 00 00 
+ff ff ff ff 
+00 00 00 00 

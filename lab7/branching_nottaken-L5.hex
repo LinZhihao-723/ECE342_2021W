@@ -1,0 +1,123 @@
+@00000000
+
+// Temp values
+13 09 c0 ff 	// 0x00000000: addi s2, zero, -4
+93 09 f0 ff 	// 0x00000004: addi s3, zero, -1
+13 0a 00 00 	// 0x00000008: addi s4, zero, 0
+93 0a 20 00 	// 0x0000000c: addi s5, zero, 2
+13 0b 30 00 	// 0x00000010: addi s6, zero, 3
+93 0b c0 ff 	// 0x00000014: addi s7, zero, -4
+13 0c f0 ff 	// 0x00000018: addi s8, zero, -1
+93 0c 00 00 	// 0x0000001c: addi s9, zero, 0
+
+// Error flag
+13 0e 00 00 	// 0x00000020: addi t3, zero, 0
+
+// Test beq
+63 02 39 09 	// 0x00000024: beq s2, s3, error
+63 00 49 09 	// 0x00000028: beq s2, s4, error
+63 0e 69 07 	// 0x0000002c: beq s2, s6, error
+63 0c 6a 07 	// 0x00000030: beq s4, s6, error
+63 8a 6a 07 	// 0x00000034: beq s5, s6, error
+
+// Test bne
+63 18 79 07 	// 0x00000038: bne s2, s7, error
+63 96 89 07 	// 0x0000003c: bne s3, s8, error
+63 14 9a 07 	// 0x00000040: bne s4, s9, error
+63 12 29 07 	// 0x00000044: bne s2, s2, error
+
+// Test blt
+63 c0 29 07 	// 0x00000048: blt s3, s2, error
+63 4e 2a 05 	// 0x0000004c: blt s4, s2, error
+63 4c 2b 05 	// 0x00000050: blt s6, s2, error
+63 4a 4b 05 	// 0x00000054: blt s6, s4, error
+63 48 5b 05 	// 0x00000058: blt s6, s5, error
+63 46 29 05 	// 0x0000005c: blt s2, s2, error
+63 44 4a 05 	// 0x00000060: blt s4, s4, error
+63 42 6b 05 	// 0x00000064: blt s6, s6, error
+
+// Test bge
+63 50 39 05 	// 0x00000068: bge s2, s3, error
+63 5e 49 03 	// 0x0000006c: bge s2, s4, error
+63 5c 69 03 	// 0x00000070: bge s2, s6, error
+63 5a 6a 03 	// 0x00000074: bge s4, s6, error
+63 d8 6a 03 	// 0x00000078: bge s5, s6, error
+
+// Test bltu
+63 e6 29 03 	// 0x0000007c: bltu s3, s2, error
+63 64 59 03 	// 0x00000080: bltu s2, s5, error
+63 e2 49 03 	// 0x00000084: bltu s3, s4, error
+63 e0 4a 03 	// 0x00000088: bltu s5, s4, error
+63 6e 5b 01 	// 0x0000008c: bltu s6, s5, error
+
+// Test bltu
+63 7c 39 01 	// 0x00000090: bgeu s2, s3, error
+63 fa 2a 01 	// 0x00000094: bgeu s5, s2, error
+63 78 3a 01 	// 0x00000098: bgeu s4, s3, error
+63 76 5a 01 	// 0x0000009c: bgeu s4, s5, error
+63 f4 6a 01 	// 0x000000a0: bgeu s5, s6, error
+
+// measure_end:
+6f 00 00 00 	// 0x000000a4: jal zero, measure_end
+// error:
+13 0e 10 00 	// 0x000000a8: addi t3, zero, 1
+ef fe 9f ff 	// 0x000000ac: jal t4, measure_end
+
+// Basic details
+// .org	0x800
+@00000800
+// .dw 0x0	// Start of PC
+00 00 00 00 
+// .dw measure_end	// End of PC
+a4 00 00 00 
+// .dw 42	// Num Instruction
+2a 00 00 00 
+// .dw 25	// Minimum IPC * 128
+19 00 00 00 
+
+// Which register to check
+// .db 0b00000000
+// .db 0b00000000
+// .db 0b00000000
+// .db 0b00110000
+00 00 00 30 
+
+// Expected register values
+// .org	0x820
+@00000820
+// .dw 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+// .dw 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+// .dw 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+// .dw 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 
+00 00 00 00 

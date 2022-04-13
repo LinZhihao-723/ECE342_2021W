@@ -1,0 +1,125 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Pleiades/Desktop/ECE342/lab1
+vcontrol
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1610599547
+!i10b 1
+!s100 YZn?SOeC39Q?zNRiN5XkH2
+I`nheHZcH^8z:2KRid4bKk0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 part2_sv_unit
+S1
+R0
+Z5 w1610552686
+Z6 8part2.sv
+Z7 Fpart2.sv
+L0 69
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1610599547.000000
+Z10 !s107 part2.sv|
+Z11 !s90 -reportprogress|300|part2.sv|
+!i113 1
+Z12 tCvgOpt 0
+vdatapath
+R1
+R2
+!i10b 1
+!s100 ?aA4?mSFNkN4@k[omTP9k3
+If1?GhBLKMdDiYVBTo:DbC3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 142
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vled_ctrl
+R1
+R2
+!i10b 1
+!s100 La;]4ze6YdX8JD0OWNH[O3
+IBO?9z=2?cSZVT^oemZlN=3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 187
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vtb
+R1
+R2
+!i10b 1
+!s100 OOL>KlcnE^PVGX=5oW80d2
+IW8283c:N]zKadl`gNdRKa2
+R3
+!s105 part2tb_sv_unit
+S1
+R0
+w1610554197
+8part2tb.sv
+Fpart2tb.sv
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+!s107 part2tb.sv|
+!s90 -reportprogress|300|part2tb.sv|
+!i113 1
+R12
+vtop
+R1
+R2
+!i10b 1
+!s100 S^D=8UQSz^_<ShF834D5:2
+IDGO:G1^8<J<9a^>Y]FHOG2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 5
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
